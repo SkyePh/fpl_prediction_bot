@@ -13,19 +13,24 @@ if response.status_code == 200:
     data = response.json()
     players = pd.DataFrame(data['elements'])
 
+    #combine first and last names in our DataFrame for later use
+    players['name'] = players['first_name'] + ' ' + players['second_name']
+
     #clean and select relevant columns
-    players = players[['first_name', 'second_name', 'minutes', 'goals_scored', 'assists',
+    players = players[['name', 'minutes', 'goals_scored', 'assists',
                        'clean_sheets', 'influence', 'creativity', 'threat', 'ict_index', 'total_points']]
 
     #prepare our data for machine learning
     features = ['minutes', 'goals_scored', 'assists', 'clean_sheets', 'influence', 'creativity', 'threat', 'ict_index']
-    target = 'total_points'  #fantasy points to predict
+    #fantasy points to predict
+    target = 'total_points'
 
     X = players[features]
     y = players[target]
+    names = players['name']
 
     #split data into training-testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test, names_train, names_test = train_test_split(X, y, names, test_size=0.2, random_state=42)
 
     #train a Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
@@ -40,5 +45,15 @@ if response.status_code == 200:
 
     print(f'Mean Squared Error: {mse}')
     print(f'R² Score: {r2}')
+
+    test_results = pd.DataFrame({
+        'Name': names_test,
+        'Actual Points': y_test,
+        'Predicted Points': y_pred
+    })
+
+    test_results = test_results.reset_index(drop=True)
+    print(test_results.head())
+
 else:
     print("Failed to fetch data from FPL API")
