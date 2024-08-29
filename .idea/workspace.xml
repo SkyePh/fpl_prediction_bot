@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="492bcc41-64cf-4337-afc4-ede24d88a45f" name="Changes" comment="Add scraper.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fpl_players.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraper.py" afterDir="false" />
-    </list>
+    <list default="true" id="492bcc41-64cf-4337-afc4-ede24d88a45f" name="Changes" comment="Train model to R^2 0.88" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724937090252</updated>
       <workItem from="1724937108979" duration="1072000" />
-      <workItem from="1724938222268" duration="4706000" />
+      <workItem from="1724938222268" duration="5015000" />
     </task>
     <task id="LOCAL-00001" summary="Add scraper.py">
       <option name="closed" value="true" />
@@ -92,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724942203282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Train model to R^2 0.88">
+      <option name="closed" value="true" />
+      <created>1724943104732</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724943104732</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,10 +104,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add scraper.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add scraper.py" />
+    <MESSAGE value="Train model to R^2 0.88" />
+    <option name="LAST_COMMIT_MESSAGE" value="Train model to R^2 0.88" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PLFantasyBot$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1724942925125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PLFantasyBot$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1724943012744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PLFantasyBot$data_process.coverage" NAME="data_process Coverage Results" MODIFIED="1724941896254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
