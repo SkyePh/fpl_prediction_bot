@@ -7,3 +7,10 @@ Pandas
 Scikit-Learn
 
 Gotta make it better and add more features!
+
+
+TO-DO:
+Make searching for a player better. Some players have similar names so we have to implement
+a way to make it more optimal. 
+
+Add a feature for the bot to generate the best team possible on its own
