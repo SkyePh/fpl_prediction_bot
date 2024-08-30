@@ -66,18 +66,21 @@ def predict_for_player(model, player_name, players):
         return None
 
 
-def main():
-    players = fetch_data()
-    if players is None:
-        return
+def menu():
+    print("Welcome to the Fantasy Premier League Prediction Bot!")
+    print("1. Predict fantasy points for a specific player")
+    print("2. Exit")
+    choice = input("Please select an option (1 or 2): ")
+    return choice
 
-    model, players = train_model(players)
 
+def search_player_screen(model, players):
     while True:
         # Get the player's name from the user
-        player_name = input("Enter a player's name to predict their fantasy points (or type 'exit' to quit): ")
+        player_name = input(
+            "Enter a player's name to predict their fantasy points (or type 'back' to return to the menu): ")
 
-        if player_name.lower() == 'exit':
+        if player_name.lower() == 'back':
             break
 
         # Predict fantasy points for the specified player
@@ -87,6 +90,29 @@ def main():
             print(f"Predicted Fantasy Points for {player_name}: {predicted_points:.2f}")
         else:
             print(f"Player '{player_name}' not found in the dataset.")
+
+
+def main():
+    # Fetch and train model data
+    players = fetch_data()
+    if players is None:
+        return
+
+    model, players = train_model(players)
+
+    while True:
+        # Show the menu and get user's choice
+        choice = menu()
+
+        if choice == '1':
+            # Go to search for a player screen
+            search_player_screen(model, players)
+        elif choice == '2':
+            # Exit the program
+            print("Exiting the program. Goodbye!")
+            break
+        else:
+            print("Invalid choice, please try again.")
 
 
 if __name__ == "__main__":
