@@ -46,24 +46,53 @@ def train_model(players):
     print(f'Mean Squared Error: {mse}')
     print(f'R² Score: {r2}')
 
-    return model, players
+    return model, features
 
 
-def predict_for_player(model, player_name, players):
-    # Search for the player by name
-    player_row = players[players['name'].str.contains(player_name, case=False)]
+def predict_for_player(model, player_row, features):
+    # Ensure player_row is in DataFrame form with the correct feature names
+    player_stats_df = pd.DataFrame([player_row[features]])
 
-    if not player_row.empty:
-        # Get player stats
-        player_stats = player_row[
-            ['minutes', 'goals_scored', 'assists', 'clean_sheets', 'influence', 'creativity', 'threat', 'ict_index']]
+    # Make prediction
+    predicted_points = model.predict(player_stats_df)[0]
+    return predicted_points
 
-        # Make prediction
-        predicted_points = model.predict(player_stats)[0]
 
-        return predicted_points
-    else:
-        return None
+def search_player_screen(model, players, features):
+    while True:
+        # Get the player's name from the user
+        search_name = input(
+            "Enter a player's name to predict their fantasy points (or type 'back' to return to the menu): ")
+
+        if search_name.lower() == 'back':
+            break
+
+        # Search for players with matching names
+        matching_players = players[players['name'].str.contains(search_name, case=False)]
+
+        if matching_players.empty:
+            print(f"No players found matching '{search_name}'. Please try again.")
+        else:
+            # Display matching players and ask user to select
+            print("Matching players:")
+            for idx, player in enumerate(matching_players['name'], 1):
+                print(f"{idx}. {player}")
+
+            try:
+                selection = int(input("Select a player by number (or type '0' to cancel): "))
+                if selection == 0:
+                    print("Cancelled selection.")
+                    continue
+
+                selected_player_row = matching_players.iloc[selection - 1]
+                selected_player_name = selected_player_row['name']
+
+                # Predict fantasy points for the selected player
+                predicted_points = predict_for_player(model, selected_player_row, features)
+                print(f"Predicted Fantasy Points for {selected_player_name}: {predicted_points:.2f}")
+
+            except (ValueError, IndexError):
+                print("Invalid selection. Please try again.")
 
 
 def menu():
@@ -74,31 +103,13 @@ def menu():
     return choice
 
 
-def search_player_screen(model, players):
-    while True:
-        # Get the player's name from the user
-        player_name = input(
-            "Enter a player's name to predict their fantasy points (or type 'back' to return to the menu): ")
-
-        if player_name.lower() == 'back':
-            break
-
-        # Predict fantasy points for the specified player
-        predicted_points = predict_for_player(model, player_name, players)
-
-        if predicted_points is not None:
-            print(f"Predicted Fantasy Points for {player_name}: {predicted_points:.2f}")
-        else:
-            print(f"Player '{player_name}' not found in the dataset.")
-
-
 def main():
     # Fetch and train model data
     players = fetch_data()
     if players is None:
         return
 
-    model, players = train_model(players)
+    model, features = train_model(players)
 
     while True:
         # Show the menu and get user's choice
@@ -106,7 +117,7 @@ def main():
 
         if choice == '1':
             # Go to search for a player screen
-            search_player_screen(model, players)
+            search_player_screen(model, players, features)
         elif choice == '2':
             # Exit the program
             print("Exiting the program. Goodbye!")
