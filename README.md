@@ -11,3 +11,4 @@ Gotta make it better and add more features!
 
 TO-DO:
 Add a feature for the bot to generate the best team possible on its own
+someone help me fix this feature i dont know whats going on
