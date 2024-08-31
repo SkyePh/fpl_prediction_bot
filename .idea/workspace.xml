@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="492bcc41-64cf-4337-afc4-ede24d88a45f" name="Changes" comment="v0.2&#10;Add player search&#10;Add prediction for future match">
-      <change beforePath="$PROJECT_DIR$/pl_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/pl_bot.py" afterDir="false" />
+    <list default="true" id="492bcc41-64cf-4337-afc4-ede24d88a45f" name="Changes" comment="v0.21&#10;Add menu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -49,7 +54,7 @@
     &quot;Python.pl_bot.executor&quot;: &quot;Run&quot;,
     &quot;Python.scraper.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;remote&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -63,8 +68,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.428" />
-        <option value="bundled-python-sdk-80e8e15d2b92-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.428" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
+        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
@@ -78,7 +83,9 @@
       <updated>1724937090252</updated>
       <workItem from="1724937108979" duration="1072000" />
       <workItem from="1724938222268" duration="5639000" />
-      <workItem from="1725007417030" duration="2031000" />
+      <workItem from="1725007417030" duration="3058000" />
+      <workItem from="1725084514562" duration="118000" />
+      <workItem from="1725084692171" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="Add scraper.py">
       <option name="closed" value="true" />
@@ -128,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725009108486</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="v0.21&#10;Add menu">
+      <option name="closed" value="true" />
+      <created>1725009535219</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725009535219</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,11 +165,12 @@
     <MESSAGE value="Train model to R^2 0.88" />
     <MESSAGE value="v0.1" />
     <MESSAGE value="v0.2&#10;Add player search&#10;Add prediction for future match" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.2&#10;Add player search&#10;Add prediction for future match" />
+    <MESSAGE value="v0.21&#10;Add menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.21&#10;Add menu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PLFantasyBot$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1724943012744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PLFantasyBot$pl_bot.coverage" NAME="pl_bot Coverage Results" MODIFIED="1725009405485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PLFantasyBot$pl_bot.coverage" NAME="pl_bot Coverage Results" MODIFIED="1725084746633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PLFantasyBot$data_process.coverage" NAME="data_process Coverage Results" MODIFIED="1724941896254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
