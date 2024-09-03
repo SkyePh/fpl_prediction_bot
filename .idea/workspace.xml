@@ -87,7 +87,7 @@
       <workItem from="1725007417030" duration="3058000" />
       <workItem from="1725084514562" duration="118000" />
       <workItem from="1725084692171" duration="4139000" />
-      <workItem from="1725088873386" duration="4022000" />
+      <workItem from="1725088873386" duration="4862000" />
     </task>
     <task id="LOCAL-00001" summary="Add scraper.py">
       <option name="closed" value="true" />
@@ -153,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725085449240</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add auto generate best team possible (Can somebody fix please i dont understand how to make it work pls">
+      <option name="closed" value="true" />
+      <created>1725093041631</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725093041631</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,11 +185,12 @@
     <MESSAGE value="v0.2&#10;Add player search&#10;Add prediction for future match" />
     <MESSAGE value="v0.21&#10;Add menu" />
     <MESSAGE value="Add search feature for players" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add search feature for players" />
+    <MESSAGE value="Add auto generate best team possible (Can somebody fix please i dont understand how to make it work pls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add auto generate best team possible (Can somebody fix please i dont understand how to make it work pls" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PLFantasyBot$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1724943012744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PLFantasyBot$pl_bot.coverage" NAME="pl_bot Coverage Results" MODIFIED="1725092891442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PLFantasyBot$pl_bot.coverage" NAME="pl_bot Coverage Results" MODIFIED="1725093476182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PLFantasyBot$data_process.coverage" NAME="data_process Coverage Results" MODIFIED="1724941896254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
