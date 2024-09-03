@@ -88,7 +88,6 @@ def train_model(players):
 
 
 def predict_for_player(model, player_row, features):
-    # Ensure player_row is in DataFrame form with the correct feature names
     player_stats_df = pd.DataFrame([player_row[features]])
 
     # Make prediction
@@ -225,7 +224,7 @@ def menu():
     print("Welcome to the Fantasy Premier League Prediction Bot!")
     print("1. Predict fantasy points for a specific player")
     print("2. Predict best team for next GameWeek (under development")
-    print("2. Exit")
+    print("3. Exit")
     choice = input("Please select an option (1, 2, 3): ")
     return choice
 
